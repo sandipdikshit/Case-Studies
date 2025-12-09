@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - Sandip Dixit</title>
+    <meta name="description" content="Product case studies showcasing 0-to-1 product builds and scaling strategies in healthcare AI">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+            background: #fafafa;
+            color: #1d1d1f;
+            padding: 30px 20px;
+            line-height: 1.47;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #d2d2d7;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1d1d1f;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: #6e6e73;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #1d1d1f;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #6e6e73;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .case-study {
+            background: #fff;
+            border-radius: 18px;
+            padding: 48px;
+            margin-bottom: 40px;
+            border: 1px solid #e8e8ed;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .case-header {
+            margin-bottom: 32px;
+        }
+
+        .case-tag {
+            display: inline-block;
+            background: #1d1d1f;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .case-title {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .case-subtitle {
+            font-size: 19px;
+            color: #6e6e73;
+            margin-bottom: 24px;
+        }
+
+        .case-meta {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 12px;
+            color: #86868b;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .meta-value {
+            font-size: 15px;
+            color: #1d1d1f;
+            font-weight: 500;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+
+        .section-content {
+            font-size: 17px;
+            color: #1d1d1f;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .metric-box {
+            background: #f5f5f7;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #6e6e73;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            padding-left: 24px;
+            margin-bottom: 12px;
+            position: relative;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .bullet-list li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: #f5f5f7;
+            border-left: 3px solid #1d1d1f;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: #d2d2d7;
+        }
+
+        .timeline-item {
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #1d1d1f;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 17px;
+        }
+
+        .timeline-desc {
+            color: #6e6e73;
+            font-size: 15px;
+        }
+
+        .decision-framework {
+            background: #fff;
+            border: 2px solid #e8e8ed;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .framework-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .framework-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .framework-step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: #1d1d1f;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .step-desc {
+            font-size: 15px;
+            color: #6e6e73;
+        }
+
+        @media (max-width: 768px) {
+            .case-study {
+                padding: 32px 24px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .case-title {
+                font-size: 28px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">Sandip Dixit</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Portfolio</a>
+                <a href="leadership.html" class="nav-link">Leadership</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>Product Case Studies</h1>
+            <p>Deep dives into building and scaling healthcare AI products from 0-to-1 and beyond</p>
+        </div>
+
+        <!-- Case Study 1: Multi-Modal RCM Platform -->
+        <div class="case-study">
+            <div class="case-header">
+                <span class="case-tag">0-TO-1 BUILD</span>
+                <h2 class="case-title">Multi-Modal Agentic RCM Platform</h2>
+                <p class="case-subtitle">Building an autonomous revenue cycle management system that reduced manual variance by 78% and improved collections by 34%</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Input Zero Technologies</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">Apr 2024 - Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Product Manager</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team Size</span>
+                        <span class="meta-value">5-10 people</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">The Challenge</h3>
+                <p class="section-content">
+                    Healthcare providers were drowning in manual revenue cycle management work—verifying benefits, processing prior authorizations, and handling claims denials. The industry standard was 18% manual variance in RCM processes, leading to $2.1M+ in annual operational costs and delayed cash flow. Traditional RCM solutions were rule-based systems that couldn't adapt to the complexity of multi-payer environments.
+                </p>
+                <div class="highlight-box">
+                    <strong>Core Problem:</strong>
+                    How do we build an AI system that can autonomously handle the full RCM workflow while maintaining accuracy across different payer requirements and clinical contexts?
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">My Approach & Decision Framework</h3>
+                <div class="decision-framework">
+                    <div class="framework-title">Product Strategy Framework</div>
+                    <div class="framework-steps">
+                        <div class="framework-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-title">User Research Deep Dive</div>
+                                <div class="step-desc">Conducted 25+ interviews with RCM specialists, identified top 3 pain points: benefits verification accuracy, prior auth bottlenecks, and denial management</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-title">Modular Architecture Decision</div>
+                                <div class="step-desc">Chose multi-agentic system over monolithic approach—allows independent scaling and updates per workflow module</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-title">MVP Prioritization (RICE Framework)</div>
+                                <div class="step-desc">Started with benefits verification agent (highest reach, highest impact, lowest effort). Validated with 5 pilot customers before building next agent</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <div class="step-title">Confidence Threshold Tuning</div>
+                                <div class="step-desc">Implemented variable confidence thresholds per payer—critical for multi-payer versatility while maintaining accuracy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Key Challenges & How I Overcame Them</h3>
+                <ul class="bullet-list">
+                    <li><strong>Challenge:</strong> Clinical validation accuracy varied wildly across payers (55-85%)
+                        <br><strong>Solution:</strong> Built payer-specific training datasets and implemented adaptive confidence thresholds. Result: Achieved 70%+ consistent IPA across all payers</li>
+                    
+                    <li><strong>Challenge:</strong> Engineering team wanted to build everything at once, risking 6+ month launch delay
+                        <br><strong>Solution:</strong> Championed MVP-first approach—shipped benefits verification agent in 3 months, validated with real customers, then expanded. This reduced risk and provided early revenue</li>
+                    
+                    <li><strong>Challenge:</strong> Sales wanted to promise features we hadn't built yet to close deals
+                        <br><strong>Solution:</strong> Created clear product roadmap with T-shirt sizing and confidence levels. Established "committed" vs "planned" feature categories. This aligned expectations and prevented over-promising</li>
+                    
+                    <li><strong>Challenge:</strong> Value-based care models required different success metrics than traditional FFS
+                        <br><strong>Solution:</strong> Designed dual-metric system—tracked both traditional RCM metrics (collection rate, denial rate) and VBC metrics (quality measure impact, risk adjustment accuracy). Achieved 10% revenue lift in VBC models</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Product Execution Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">Month 1-2: Discovery & Validation</div>
+                        <div class="timeline-desc">User research, competitive analysis, technical feasibility assessment. Defined North Star metric: Manual Variance Reduction</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Month 3-4: MVP Build - Benefits Verification Agent</div>
+                        <div class="timeline-desc">Launched first autonomous agent with 5 pilot customers. Achieved 65% accuracy baseline</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Month 5-7: Iteration & Prior Auth Agent</div>
+                        <div class="timeline-desc">Improved BV agent to 70%+ accuracy. Launched PA agent. Manual variance dropped from 18% to 12%</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Month 8-10: Scaling & Clinical IPA</div>
+                        <div class="timeline-desc">Added clinical validation and denial management agents. Manual variance reached 4%. Collection rate improved 34%</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Month 11-12: VBC Expansion</div>
+                        <div class="timeline-desc">Launched value-based care optimization features. Achieved 10% revenue lift for VBC customers</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Results & Impact</h3>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-value">78%</div>
+                        <div class="metric-label">Manual Variance Reduction</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">34%</div>
+                        <div class="metric-label">Collection Rate Improvement</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">70%+</div>
+                        <div class="metric-label">Clinical IPA Accuracy</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">10%</div>
+                        <div class="metric-label">Revenue Lift (VBC Models)</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">$2.1M</div>
+                        <div class="metric-label">Annual Cost Savings</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">26%</div>
+                        <div class="metric-label">Denial Rate Reduction</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">What I Learned</h3>
+                <ul class="bullet-list">
+                    <li><strong>Modular beats monolithic in AI systems:</strong> Building independent agents allowed us to iterate and improve each workflow without breaking others. This architectural decision was crucial for our velocity</li>
+                    
+                    <li><strong>Confidence thresholds are product decisions, not just ML decisions:</strong> We initially treated confidence scoring as purely technical. Realizing it was a product lever—tunable per payer and workflow—was a breakthrough</li>
+                    
+                    <li><strong>Early customer validation prevents wasted engineering:</strong> Our MVP approach with pilot customers saved us from building 3 features that users said they wanted but never used</li>
+                    
+                    <li><strong>Healthcare AI requires domain-specific success metrics:</strong> Traditional SaaS metrics weren't sufficient. We had to define new KPIs like "clinical accuracy per payer" and "autonomous resolution rate"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Case Study 2: Clinical Validation AI -->
+        <div class="case-study">
+            <div class="case-header">
+                <span class="case-tag">SCALING</span>
+                <h2 class="case-title">AI-Powered Clinical Validation Platform</h2>
+                <p class="case-subtitle">Scaling predictive models to 91% accuracy and driving $20M+ ARR with multi-payer support</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Tab32</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">Jun 2022 - Apr 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">AI Product Manager</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team Size</span>
+                        <span class="meta-value">8-12 people</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">The Challenge</h3>
+                <p class="section-content">
+                    Tab32 had built a dental practice management platform with basic clinical validation, but accuracy was stuck at 78% and struggling with edge cases. The product was live with paying customers, but churn was increasing due to false positives in clinical alerts. We needed to improve accuracy without breaking existing integrations or disrupting the user experience for 500+ practices.
+                </p>
+                <div class="highlight-box">
+                    <strong>Core Problem:</strong>
+                    How do we improve model accuracy from 78% to 90%+ while maintaining backward compatibility, managing customer expectations, and scaling to support multiple insurance payers?
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">My Approach & Decision Framework</h3>
+                <p class="section-content">This was a scaling challenge, not a 0-to-1 build, which required different product thinking:</p>
+                
+                <div class="decision-framework">
+                    <div class="framework-title">Scaling Strategy Framework</div>
+                    <div class="framework-steps">
+                        <div class="framework-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-title">Root Cause Analysis</div>
+                                <div class="step-desc">Analyzed 10,000+ false positives to identify patterns. Found 60% came from 3 edge cases in payer-specific rules</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-title">Phased Rollout Strategy</div>
+                                <div class="step-desc">Created 3-tier rollout: shadow mode (collect data), opt-in beta (early adopters), full release. This de-risked the model updates</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-title">Multi-Payer Support Design</div>
+                                <div class="step-desc">Built payer-agnostic core with payer-specific adapters. Enabled rapid expansion without rewriting core logic</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <div class="step-title">Customer Communication Plan</div>
+                                <div class="step-desc">Proactive communication with top 50 customers before each release. Set expectations on accuracy improvements and gathered feedback</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Key Challenges & Solutions</h3>
+                <ul class="bullet-list">
+                    <li><strong>Challenge:</strong> Model improvements caused UI behavior changes that confused existing users
+                        <br><strong>Solution:</strong> Built "explanation UI" showing why validation flagged each case. Reduced support tickets by 45% and improved user trust</li>
+                    
+                    <li><strong>Challenge:</strong> Data science team wanted to rebuild entire model from scratch (6 month effort)
+                        <br><strong>Solution:</strong> Advocated for incremental improvements approach—targeted fixes for top 3 error patterns. Achieved 91% accuracy in 3 months vs 6+ month rebuild</li>
+                    
+                    <li><strong>Challenge:</strong> Adding new payers required 2-3 weeks of custom engineering each time
+                        <br><strong>Solution:</strong> Refactored architecture to payer-agnostic core with config-driven adapters. Reduced new payer onboarding to 2-3 days</li>
+                    
+                    <li><strong>Challenge:</strong> Enterprise customers wanted custom validation rules but this would fragment the product
+                        <br><strong>Solution:</strong> Built rule configuration UI with guardrails—customers could tune sensitivity but not fundamentally change validation logic. Satisfied 90% of customization requests without technical debt</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Results & Impact</h3>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-value">91%</div>
+                        <div class="metric-label">Model Accuracy Achieved</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">21%</div>
+                        <div class="metric-label">Higher Customer LTV</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">34%</div>
+                        <div class="metric-label">Collection Rate Improvement</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">45%</div>
+                        <div class="metric-label">Support Ticket Reduction</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">15</div>
+                        <div class="metric-label">Payers Supported (from 3)</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">$20M+</div>
+                        <div class="metric-label">ARR Contribution</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">What I Learned</h3>
+                <ul class="bullet-list">
+                    <li><strong>Incremental improvement beats rebuild in most cases:</strong> The data science team wanted a ground-up rebuild. By focusing on highest-impact error patterns, we achieved 91% accuracy in half the time</li>
+                    
+                    <li><strong>Explanation UI is critical for AI products:</strong> Users don't just want accurate results—they want to understand WHY the AI made a decision. This builds trust and reduces support burden</li>
+                    
+                    <li><strong>Architecture enables velocity:</strong> The payer-agnostic design decision paid dividends. We went from supporting 3 payers to 15 payers without scaling engineering team</li>
+                    
+                    <li><strong>Customer communication prevents churn during product changes:</strong> Proactive communication about model updates—what's changing, why, and what to expect—prevented churn during a sensitive transition period</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Case Study 3: UK Platform Expansion -->
+        <div class="case-study">
+            <div class="case-header">
+                <span class="case-tag">GROWTH & EXPANSION</span>
+                <h2 class="case-title">UK Practice Management Platform Expansion</h2>
+                <p class="case-subtitle">Scaling operations from £0 to £3.4B managed across 500+ healthcare practices</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">AltrisDev UK</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">Apr 2022 - Jun 2022</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Product Manager</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team Size</span>
+                        <span class="meta-value">12-15 people</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">The Challenge</h3>
+                <p class="section-content">
+                    AltrisDev had a successful US-based practice management platform but wanted to expand to the UK market—a completely different regulatory environment (NHS vs US insurance), different clinical workflows, and different user expectations. The challenge wasn't just localization—it required rethinking core product assumptions while maintaining the codebase shared with the US product.
+                </p>
+                <div class="highlight-box">
+                    <strong>Core Problem:</strong>
+                    How do we expand to a new market with fundamentally different requirements while maintaining a single codebase, meeting aggressive growth targets, and building trust with a new user base?
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">My Approach & Decision Framework</h3>
+                <div class="decision-framework">
+                    <div class="framework-title">Market Expansion Strategy</div>
+                    <div class="framework-steps">
+                        <div class="framework-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-title">Market Research & Localization Needs</div>
+                                <div class="step-desc">Conducted 40+ interviews with UK healthcare providers. Identified 8 critical differences from US market in workflows and expectations</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-title">Build vs Buy vs Partner Decision</div>
+                                <div class="step-desc">Analyzed options for NHS integration. Chose partnership with existing NHS connector vs building from scratch—saved 4 months</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-title">Cloud-Native Architecture Migration</div>
+                                <div class="step-desc">Made strategic decision to rebuild UK deployment on cloud-native stack. Enabled faster iteration and better compliance with UK data regulations</div>
+                            </div>
+                        </div>
+                        <div class="framework-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <div class="step-title">Dashboard-First Strategy</div>
+                                <div class="step-desc">Built 500+ practice-specific dashboards before launching full platform. Proved value quickly and gathered usage data to inform roadmap</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Key Challenges & Solutions</h3>
+                <ul class="bullet-list">
+                    <li><strong>Challenge:</strong> UK data regulations (GDPR) were stricter than US, requiring major architecture changes
+                        <br><strong>Solution:</strong> Advocated for UK-specific data residency and implemented data minimization patterns. This became a competitive advantage vs US competitors</li>
+                    
+                    <li><strong>Challenge:</strong> Engineering team wanted to fork codebase for UK, which would create long-term maintenance nightmare
+                        <br><strong>Solution:</strong> Pushed for configuration-driven approach with feature flags and regional adapters. Maintained single codebase while supporting market-specific features</li>
+                    
+                    <li><strong>Challenge:</strong> NHS integration was complex and poorly documented
+                        <br><strong>Solution:</strong> Partnered with UK-based NHS integration specialist rather than building ourselves. Strategic partnership vs build decision saved 4+ months</li>
+                    
+                    <li><strong>Challenge:</strong> UK users expected different UX patterns than US users (more data density, different navigation)
+                        <br><strong>Solution:</strong> Built configurable UI framework that allowed region-specific layouts without forking UI code. Satisfied UK preferences while maintaining US experience</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Results & Impact</h3>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-value">£3.4B</div>
+                        <div class="metric-label">Platform Operations Managed</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">500+</div>
+                        <div class="metric-label">Practice Dashboards Built</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">21%</div>
+                        <div class="metric-label">Industry Demand Growth</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">148%</div>
+                        <div class="metric-label">ARR Growth Rate</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">3 mo</div>
+                        <div class="metric-label">Time to Market</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">92%</div>
+                        <div class="metric-label">Customer Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">What I Learned</h3>
+                <ul class="bullet-list">
+                    <li><strong>Market expansion is product strategy, not just localization:</strong> Simply translating the US product wouldn't have worked. Understanding UK healthcare workflows required rethinking core assumptions</li>
+                    
+                    <li><strong>Partner vs build decisions accelerate growth:</strong> The NHS integration partnership was critical. Would have taken 6+ months to build ourselves, and partners had domain expertise we lacked</li>
+                    
+                    <li><strong>Single codebase with configuration beats forking:</strong> Fighting to maintain one codebase was worth it. By month 6, features built for UK were being adopted by US customers</li>
+                    
+                    <li><strong>Dashboard-first strategy proves value quickly:</strong> Instead of launching full platform, we led with dashboards. Practices saw value in week 1, which built trust for deeper integration</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid #d2d2d7;">
+            <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 12px;">Want to discuss these case studies?</h3>
+            <p style="font-size: 17px; color: #6e6e73; margin-bottom: 24px;">I'd love to walk through my decision-making process and product thinking</p>
+            <a href="mailto:sandip@example.com" style="display: inline-block; background: #1d1d1f; color: #fff; padding: 12px 32px; border-radius: 24px; text-decoration: none; font-weight: 600;">Get in Touch</a>
+        </div>
+    </div>
+</body>
+</html>
